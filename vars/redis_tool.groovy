@@ -4,6 +4,7 @@ def call() {
 
     // Step 1: Clone the specific Git repository and checkout the desired branch
     sh 'git clone https://github.com/Nishkarsh9/image.git'
+    sh 'cd image'
 
     // Step 2: User Approval (if needed)
     if (config.KEEP_APPROVAL_STAGE.toBoolean()) {
@@ -13,7 +14,7 @@ def call() {
     // Step 3: Execute Ansible Playbook
     try {
         ansiblePlaybook(
-            playbook: 'ansible/playbook.yml',
+            playbook: 'playbook.yml',
             extraVars: [
                 CODE_BASE_PATH: config.CODE_BASE_PATH,
                 ENVIRONMENT: config.ENVIRONMENT
