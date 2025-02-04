@@ -19,7 +19,7 @@ def call() {
                 ENVIRONMENT: config.ENVIRONMENT
             ]
           become: true,  // If you need to run with sudo privileges
-            becomeUser: 'root'  // Optionally specify user (if needed)
+          becomeUser: 'root'  // Optionally specify user (if needed)
         )
     } catch (Exception e) {
         currentBuild.result = 'FAILURE'
