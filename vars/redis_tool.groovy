@@ -26,6 +26,5 @@ def call() {
         throw e
     }
 
-    // Step 4: Send Notification to Slack
-    slackSend(channel: config.SLACK_CHANNEL_NAME, message: config.ACTION_MESSAGE)
+    
 }
