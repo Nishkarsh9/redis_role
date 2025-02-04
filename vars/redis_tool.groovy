@@ -1,6 +1,6 @@
 def call() {
     // Load configuration from config.yml file
-    def config = readYaml file: 'image/resources/config.yml'
+    def config = readYaml file: 'Assignment-06@libs/8e000fc4ebcf6479b76459255907e8ded33a5f9f91b08021e1ebf509c0256fef/resources/config.yml'
 
     // Step 1: Clone the specific Git repository and checkout the desired branch
     sh 'git clone https://github.com/Nishkarsh9/image.git'
